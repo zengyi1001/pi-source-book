@@ -1,0 +1,28 @@
+PASS transcript: section removal and tool redefinition survive replay
+PASS transcript: changed interface removes then adds the same tool
+PASS budgets: context safety room clips the response ceiling
+PASS budgets: thinking shares a cap and preserves answer room when necessary
+PASS loop: all preflights finish before execution; transcript preserves call order
+PASS loop: one sequential tool makes the whole batch sequential
+PASS loop: a length stop executes no apparently valid call
+PASS loop: abort during the second preflight prevents the first prepared call
+PASS loop: termination requires every finalized result to request it
+PASS compaction: strict threshold and worked token counts
+PASS compaction: budget can retain fewer tokens at a later valid cut
+PASS compaction: a trailing oversized result retains its preceding call
+PASS compaction: adjacent metadata moves the raw boundary backward
+TRACE search scores=read_issue:0.598186,create_issue:0.499176
+PASS search: BM25 numeric example and duplicate query terms
+PASS search: Chinese-only query has no tokens; ties preserve input order
+PASS search: schema names and namespace instructions are searchable
+PASS search: load changes only the eligible inactive tool set
+PASS planning: todo numbering is rebuilt and DONE is self-reported
+PASS planning: command classifier permits commands with unexamined semantics
+PASS planning: real extension restores tools and retains custom write capabilities
+PASS subagents: worker pool caps concurrency and keeps input order
+PASS subagents: final handoff is the first text block of the last assistant
+PASS subagents: dispatch uses explicit arguments and parses split JSON lines
+PASS subagents: chain passes selected text and stops at a failed child
+PASS subagents: parallel reports partial failure without a parent error flag
+PASS files: same path and symlink serialize actual read-modify-write
+PASS 26 cases; 8 suites; no model/network requests

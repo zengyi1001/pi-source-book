@@ -1,0 +1,3 @@
+path	sha256
+packages/coding-agent/examples/extensions/book-literal-search.ts	b4a8ddb4d90a79e2175306c3f861068e57a257499d40498238158e4c533864c0
+packages/coding-agent/test/suite/book-session-walkthrough.test.ts	77f38ebfa6f59b0060769ea4dfcb9f73f2d6df579297a83a1a5cc21844be4c60

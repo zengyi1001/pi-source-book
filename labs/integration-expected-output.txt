@@ -1,0 +1,20 @@
+PASS integration coding: Textbook complete session reads, edits, persists and resumes without replaying the completed edit
+PASS integration coding: Textbook complete session persists a failed batch without writing its first replacement
+PASS integration coding: Textbook literal search development treats dots and brackets as literal text
+PASS integration coding: Textbook literal search development counts each line once and supports explicit case folding and CRLF
+PASS integration coding: Textbook literal search development rejects an empty search string
+PASS integration coding: Textbook literal search development registers, declares, executes and persists a real extension tool
+PASS integration coding: Textbook literal search development rejects invalid parameters before the extension reads a file
+TRACE session requests=3 tools=read,edit writes=1 persisted=6 resumedWrites=1
+TRACE conflict writes=0 toolError=true persistedError=true
+TRACE extension declared=literal_search lines=2 count=1 persisted=true
+PASS integration durable: tool recovery answers an unsafe tool interrupted after intent with its durable partial output
+PASS integration durable: tool recovery reruns a tool only when both the stored and the current replay policy are safe
+PASS integration durable: tool recovery reruns a safe tool with the environment of the conversation's cwd at rerun, and not once it is deselected
+PASS integration durable: tool recovery reruns beforeTool when interrupted before intent, and executes once
+PASS integration durable: tool recovery reruns the generation tools phase interrupted before its commit
+PASS integration durable: tool recovery answers an aborted tool with its partial output and continues the run
+PASS integration durable: tool recovery lets context derivation answer a faulted tool and continues the run
+PASS integration durable: tool recovery answers a real bash command interrupted by close and reopen, then finishes the run
+PASS integration durable: tool recovery clears the interrupted attempt's progress before a safe rerun
+PASS 16 integration cases; faux models; temporary files and SQLite
